@@ -1,0 +1,70 @@
+@import "../shared/helper";
+
+.home {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  background: linear-gradient(
+    90deg,
+    rgba(2, 0, 36, 1) 0%,
+    rgba(0, 12, 47, 1) 35%,
+    rgba(0, 15, 48, 1) 50%,
+    rgba(1, 7, 37, 1) 65%,
+    rgba(0, 2, 11, 1) 100%
+  );
+  header {
+    height: px(111);
+    background-size: cover;
+    opacity: 0.9;
+  }
+  main {
+    padding-top: px(20);
+    flex: 1;
+    display: grid;
+    grid-template:
+      "box1 box2 box4 box5" 755fr
+      "box3  box3 box4 box5" 363fr / 366fr 361fr 811fr 747fr;
+    gap: px(28);
+    > section {
+      border: 1px solid #0764bc;
+      border-radius: 4px;
+      position: relative;
+      box-shadow: 0 0 2px 0 #0e325f, inset 0 0 2px 0 #0e325f;
+      background: #0c1139;
+      &::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        top: 0;
+        border-radius: 4px;
+        box-shadow: 17px 0 0 -16px #0e325f, -17px 0 0 -16px #0e325f,
+          0 17px 0 -16px #0e325f, 0 -17px 0 -16px #0e325f, 9px 0 0 -8px #0d4483,
+          -9px 0 0 -8px #0d4483, 0 9px 0 -8px #0d4483, 0 -9px 0 -8px #0d4483;
+      }
+    }
+    > .section1 {
+      grid-area: box1;
+    }
+    > .section2 {
+      grid-area: box2;
+    }
+    > .section3 {
+      grid-area: box3;
+    }
+    > .section4 {
+      grid-area: box4;
+      background: transparent;
+      box-shadow: none;
+      &::before {
+        box-shadow: 17px 0 0 -16px#000b2e, -17px 0 0 -16px#000b2e,
+          0 17px 0 -16px#000b2e, 0 -17px 0 -16px#000b2e, 9px 0 0 -8px #000b2e,
+          -9px 0 0 -8px #000b2e, 0 9px 0 -8px #000b2e, 0 -9px 0 -8px#000b2e;
+      }
+    }
+    > .section5 {
+      grid-area: box5;
+    }
+  }
+}
