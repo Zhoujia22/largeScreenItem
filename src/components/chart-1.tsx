@@ -2,7 +2,6 @@ import React, { useEffect, useRef } from "react";
 import * as echarts from "echarts";
 import { px } from "../shared/px";
 
-
 export const Chart1 = () => {
   const divRef = useRef();
   useEffect(() => {
@@ -61,9 +60,9 @@ export const Chart1 = () => {
   });
 
   return (
-    <div className="bordered chartWrapper">
-      <h2>各省主要城市订单统计</h2>
-      <div ref={divRef} className="chart"></div>
+    <div className="bordered chart1Wrapper">
+      <h2>主要城市订单统计</h2>
+      <div ref={divRef} className="chart" />
     </div>
   );
 };
