@@ -56,15 +56,9 @@
       justify-content: space-between;
       .chart1Wrapper {
         height: px(315);
-        display: flex;
-        flex-direction: column;
-        align-items: center;
       }
       .chart2Wrapper {
         height: px(423);
-        display: flex;
-        flex-direction: column;
-        align-items: center;
         .legend {
           display: flex;
           justify-content: flex-end;
@@ -89,6 +83,13 @@
     }
     > .section2 {
       grid-area: box2;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      .chart3Wrapper,
+      .chart4Wrapper {
+        height: px(363);
+      }
     }
     > .section3 {
       grid-area: box3;
@@ -118,6 +119,14 @@
     border-radius: 4px;
     margin: px(20) 0 1px;
   }
+}
+.chart1Wrapper,
+.chart2Wrapper,
+.chart3Wrapper,
+.chart4Wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 .bordered {
   border: 1px solid #0764bc;
