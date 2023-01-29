@@ -6,7 +6,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background: #000515
+  background: #000515;
 }
 
 code {
@@ -27,6 +27,13 @@ code {
 }
 body {
   font-family: $font-hei;
+  font-size: 16px;
+}
+h1,
+h2,
+h3,
+h4,
+h5 {
   font-size: 16px;
 }
 
