@@ -118,14 +118,45 @@
     }
     > .section4 {
       grid-area: box4;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
       .chart6Wrapper {
         height: px(753);
         background: transparent;
         box-shadow: none;
+        position: relative;
+        width: 100%;
         &::before {
           box-shadow: 17px 0 0 -16px#000b2e, -17px 0 0 -16px#000b2e,
             0 17px 0 -16px#000b2e, 0 -17px 0 -16px#000b2e, 9px 0 0 -8px #000b2e,
             -9px 0 0 -8px #000b2e, 0 9px 0 -8px #000b2e, 0 -9px 0 -8px#000b2e;
+        }
+        .notes {
+          position: relative;
+          left: px(200);
+          bottom: px(40);
+        }
+      }
+      .ageGroup {
+        height: px(363);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        .charts {
+          height: px(315);
+          border: 1px solid white;
+          width: 100%;
+          display: flex;
+          padding: px(30);
+        }
+        .chart7WrapperFirst,
+        .chart7WrapperSecond,
+        .chart7WrapperThird {
+          flex: 1;
+          border: 1px solid red;
+          display: flex;
+          flex-direction: column;
         }
       }
     }

@@ -19,7 +19,7 @@ export const Chart6 = () => {
         max: 1000,
         bottom: px(200),
         itemHeight: px(180),
-        text: ["密集", "稀少"],
+        text: ["1000w", "10w"],
         textStyle: { color: "white" },
         realtime: false,
         calculable: false,
@@ -40,14 +40,14 @@ export const Chart6 = () => {
             { name: "黑龙江省", value: 100 },
             { name: "甘肃省", value: 60 },
             { name: "云南省", value: 70 },
-            { name: "广西壮族自治区", value: 60 },
-            { name: "湖南省", value: 200 },
-            { name: "陕西省", value: 200 },
+            { name: "广西壮族自治区", value: 300 },
+            { name: "湖南省", value: 500 },
+            { name: "陕西省", value: 500 },
             { name: "广东省", value: 800 },
-            { name: "吉林省", value: 160 },
+            { name: "吉林省", value: 200 },
             { name: "河北省", value: 300 },
-            { name: "湖北省", value: 130 },
-            { name: "贵州省", value: 100 },
+            { name: "湖北省", value: 400 },
+            { name: "贵州省", value: 300 },
             { name: "山东省", value: 600 },
             { name: "江西省", value: 200 },
             { name: "河南省", value: 300 },
@@ -57,7 +57,7 @@ export const Chart6 = () => {
             { name: "福建省", value: 400 },
             { name: "浙江省", value: 600 },
             { name: "江苏省", value: 400 },
-            { name: "重庆市", value: 300 },
+            { name: "重庆市", value: 600 },
             { name: "宁夏回族自治区", value: 120 },
             { name: "海南省", value: 100 },
             { name: "台湾省", value: 80 },
@@ -84,8 +84,9 @@ export const Chart6 = () => {
 
   return (
     <div className="bordered  chart6Wrapper">
-      <h2>主要城市订单统计</h2>
+      <h2>全国活跃用户分布</h2>
       <div ref={divRef} className="chart" />
+      <div className="notes">此地图仅显示了中国的部分区域</div>
     </div>
   );
 };
