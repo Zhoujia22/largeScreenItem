@@ -118,12 +118,15 @@
     }
     > .section4 {
       grid-area: box4;
-      background: transparent;
-      box-shadow: none;
-      &::before {
-        box-shadow: 17px 0 0 -16px#000b2e, -17px 0 0 -16px#000b2e,
-          0 17px 0 -16px#000b2e, 0 -17px 0 -16px#000b2e, 9px 0 0 -8px #000b2e,
-          -9px 0 0 -8px #000b2e, 0 9px 0 -8px #000b2e, 0 -9px 0 -8px#000b2e;
+      .chart6Wrapper {
+        height: px(753);
+        background: transparent;
+        box-shadow: none;
+        &::before {
+          box-shadow: 17px 0 0 -16px#000b2e, -17px 0 0 -16px#000b2e,
+            0 17px 0 -16px#000b2e, 0 -17px 0 -16px#000b2e, 9px 0 0 -8px #000b2e,
+            -9px 0 0 -8px #000b2e, 0 9px 0 -8px #000b2e, 0 -9px 0 -8px#000b2e;
+        }
       }
     }
     > .section5 {
@@ -146,7 +149,8 @@
 .chart2Wrapper,
 .chart3Wrapper,
 .chart4Wrapper,
-.chart5Wrapper {
+.chart5Wrapper,
+.chart6Wrapper {
   display: flex;
   flex-direction: column;
   align-items: center;

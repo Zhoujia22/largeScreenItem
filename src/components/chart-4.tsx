@@ -65,7 +65,7 @@ export const Chart4 = () => {
 
   return (
     <div className="bordered chart4Wrapper">
-      <h2>各时段订单增长</h2>
+      <h2>各时段订单增长率</h2>
       <div ref={divRef} className="chart"></div>
     </div>
   );
