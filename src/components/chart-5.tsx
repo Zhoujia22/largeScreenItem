@@ -2,7 +2,7 @@ import React from "react";
 
 export const Chart5 = () => {
   return (
-    <div className="chart5Wrapper">
+    <div className="chart5Wrapper  wrapper">
       <h2>顾客点餐品类占比</h2>
       <table>
         <thead>

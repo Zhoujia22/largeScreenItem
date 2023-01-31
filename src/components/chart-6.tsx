@@ -83,7 +83,7 @@ export const Chart6 = () => {
   });
 
   return (
-    <div className="bordered  chart6Wrapper">
+    <div className="bordered  wrapper chart6Wrapper">
       <h2>全国活跃用户分布</h2>
       <div ref={divRef} className="chart" />
       <div className="notes">此地图仅显示了中国的部分区域</div>

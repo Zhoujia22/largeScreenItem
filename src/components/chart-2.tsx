@@ -85,7 +85,7 @@ export const Chart2 = () => {
   });
 
   return (
-    <div className="bordered chart2Wrapper">
+    <div className="bordered wrapper chart2Wrapper">
       <h2>全天订单数量</h2>
       <div ref={divRef} className="chart"></div>
       <div className="legend">

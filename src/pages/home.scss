@@ -33,20 +33,6 @@
     gap: px(28);
     > section {
       text-align: center;
-      h2 {
-        flex-shrink: 0;
-        border: 1px solid #0a5299;
-        border-bottom-left-radius: 6px;
-        border-bottom-right-radius: 6px;
-        font-size: px(22);
-        line-height: px(24);
-        padding: px(10) px(28);
-        text-shadow: 0 0 px(3) white;
-      }
-      .chart {
-        flex: 1;
-        width: 100%;
-      }
     }
     .section1 {
       grid-area: box1;
@@ -139,24 +125,62 @@
         }
       }
       .ageGroup {
-        height: px(363);
         display: flex;
         flex-direction: column;
-        align-items: center;
-        .charts {
-          height: px(315);
-          border: 1px solid white;
+        height: px(363);
+        > .charts {
           width: 100%;
+          flex: 1;
+          border: 1px solid red;
           display: flex;
           padding: px(30);
         }
-        .chart7WrapperFirst,
-        .chart7WrapperSecond,
-        .chart7WrapperThird {
+        .chart7Wrapper,
+        .chart8Wrapper,
+        .chart9Wrapper {
           flex: 1;
           border: 1px solid red;
           display: flex;
           flex-direction: column;
+        }
+        .chart7Wrapper {
+          .legend {
+            height: px(40);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            > span {
+              display: inline-block;
+              width: px(40);
+              height: px(20);
+              border: 1px solid white;
+              border-radius: px(8);
+              margin: 0 px(10);
+            }
+            .male {
+              background: #33a4fa;
+            }
+            .female {
+              background: #8d70f8;
+            }
+          }
+          .chartAndText {
+            flex: 1;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            > .text {
+              position: absolute;
+              top: 50%;
+              left: 50%;
+              transform: translate(-50%, -50%);
+              color: #33a4fa;
+              font-size: px(30);
+              text-shadow: 0 0 px(10) #14598e;
+              font-weight: bold;
+            }
+          }
         }
       }
     }
@@ -176,15 +200,24 @@
     margin: px(20) 0 1px;
   }
 }
-.chart1Wrapper,
-.chart2Wrapper,
-.chart3Wrapper,
-.chart4Wrapper,
-.chart5Wrapper,
-.chart6Wrapper {
+.wrapper {
   display: flex;
   flex-direction: column;
   align-items: center;
+  h2 {
+    flex-shrink: 0;
+    border: 1px solid #0a5299;
+    border-bottom-left-radius: 4px;
+    border-bottom-right-radius: 4px;
+    font-size: px(22);
+    line-height: px(24);
+    padding: px(10) px(28);
+    text-shadow: 0 0 px(3) white;
+  }
+  .chart {
+    flex: 1;
+    width: 100%;
+  }
 }
 .bordered {
   border: 1px solid #0764bc;

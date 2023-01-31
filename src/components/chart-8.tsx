@@ -38,7 +38,7 @@ export const Chart8 = () => {
   });
 
   return (
-    <div className="chart7WrapperSecond">
+    <div className="chart8Wrapper  wrapper">
       <div ref={divRef} className="chart" />
     </div>
   );
