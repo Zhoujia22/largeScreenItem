@@ -7,8 +7,6 @@ export const Chart1 = () => {
   useEffect(() => {
     const myChart = echarts.init(divRef.current);
     myChart.setOption({
-      title: { show: false },
-      legend: { show: false },
       xAxis: {
         type: "category",
         axisTick: { show: false },

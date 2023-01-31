@@ -12,6 +12,8 @@ import { Chart8 } from "../components/chart-8";
 import { Chart9 } from "../components/chart-9";
 import { Chart10 } from "../components/chart-10";
 import { Chart11 } from "../components/chart-11";
+import { Chart12 } from "../components/chart-12";
+import { Chart13 } from "../components/chart-13";
 
 export const Home = () => {
   const date = new Date();
@@ -52,7 +54,10 @@ export const Home = () => {
           </div>
           <div className="bordered wrapper row2 ">
             <h2>用户平均单价</h2>
-            <div className="charts"></div>
+            <div className="charts">
+              <Chart12 />
+              <Chart13 />
+            </div>
           </div>
           <div className="bordered wrapper row3 ">
             <h2>售后服务部</h2>

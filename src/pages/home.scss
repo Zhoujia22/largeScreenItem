@@ -211,7 +211,6 @@
       justify-content: space-between;
       .row1 {
         height: px(317);
-
         .chart11Wrapper {
           flex: 1;
           .legend {
@@ -233,10 +232,13 @@
         }
       }
       .row2 {
-        height: px(317);
+        height: px(330);
+        .chart12Wrapper {
+          flex: 1;
+        }
       }
       .row3 {
-        height: px(455);
+        height: px(442);
       }
       .charts {
         display: flex;
