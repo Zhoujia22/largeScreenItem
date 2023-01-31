@@ -10,6 +10,8 @@ import { Chart6 } from "../components/chart-6";
 import { Chart7 } from "../components/chart-7";
 import { Chart8 } from "../components/chart-8";
 import { Chart9 } from "../components/chart-9";
+import { Chart10 } from "../components/chart-10";
+import { Chart11 } from "../components/chart-11";
 
 export const Home = () => {
   const date = new Date();
@@ -40,7 +42,22 @@ export const Home = () => {
             </div>
           </div>
         </section>
-        <section className="bordered section5"></section>
+        <section className=" section5">
+          <div className="bordered wrapper  row1">
+            <h2>服务评价统计</h2>
+            <div className="charts">
+              <Chart10 />
+              <Chart11 />
+            </div>
+          </div>
+          <div className="bordered wrapper row2 ">
+            <h2>用户平均单价</h2>
+            <div className="charts"></div>
+          </div>
+          <div className="bordered wrapper row3 ">
+            <h2>售后服务部</h2>
+          </div>
+        </section>
       </main>
       <footer> &copy; Zhoujia22 2022 - {year}</footer>
     </div>
