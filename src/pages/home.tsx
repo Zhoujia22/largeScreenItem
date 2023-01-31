@@ -14,6 +14,7 @@ import { Chart10 } from "../components/chart-10";
 import { Chart11 } from "../components/chart-11";
 import { Chart12 } from "../components/chart-12";
 import { Chart13 } from "../components/chart-13";
+import { Chart14 } from "../components/chart-14";
 
 export const Home = () => {
   const date = new Date();
@@ -61,6 +62,7 @@ export const Home = () => {
           </div>
           <div className="bordered wrapper row3 ">
             <h2>售后服务部</h2>
+            <Chart14 />
           </div>
         </section>
       </main>
