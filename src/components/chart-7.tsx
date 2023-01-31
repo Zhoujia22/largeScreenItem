@@ -13,7 +13,7 @@ export const Chart7 = () => {
       series: [
         {
           type: "pie",
-          radius: ["65%", "90%"],
+          radius: ["70%", "90%"],
           avoidLabelOverlap: false,
           label: {
             show: true,

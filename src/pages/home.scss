@@ -131,7 +131,6 @@
         > .charts {
           width: 100%;
           flex: 1;
-          border: 1px solid red;
           display: flex;
           padding: px(30);
         }
@@ -139,30 +138,12 @@
         .chart8Wrapper,
         .chart9Wrapper {
           flex: 1;
-          border: 1px solid red;
           display: flex;
           flex-direction: column;
-        }
-        .chart7Wrapper {
           .legend {
             height: px(40);
             display: flex;
             align-items: center;
-            justify-content: center;
-            > span {
-              display: inline-block;
-              width: px(40);
-              height: px(20);
-              border: 1px solid white;
-              border-radius: px(8);
-              margin: 0 px(10);
-            }
-            .male {
-              background: #33a4fa;
-            }
-            .female {
-              background: #8d70f8;
-            }
           }
           .chartAndText {
             flex: 1;
@@ -179,6 +160,37 @@
               font-size: px(30);
               text-shadow: 0 0 px(10) #14598e;
               font-weight: bold;
+            }
+          }
+        }
+        .chart7Wrapper {
+          .legend {
+            justify-content: center;
+            > span {
+              width: px(40);
+              height: px(20);
+              border: px(1) solid white;
+              border-radius: px(8);
+              margin: 0 px(10);
+            }
+            .male {
+              background: #33a4fa;
+            }
+            .female {
+              background: #8d70f8;
+            }
+          }
+        }
+        .chart8Wrapper {
+          .legend {
+            justify-content: flex-start;
+            flex-wrap: wrap;
+            > span {
+              width: px(16);
+              height: px(10);
+              border-radius: px(2);
+              border: px(1) solid white;
+              margin: 0 px(10);
             }
           }
         }
