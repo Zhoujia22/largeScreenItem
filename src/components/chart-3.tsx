@@ -80,7 +80,7 @@ export const Chart3 = () => {
 
   return (
     <div className="bordered wrapper chart3Wrapper">
-      <h2>各城市订单增长率</h2>
+      <h2>城市订单增长率</h2>
       <div ref={divRef} className="chart" />
     </div>
   );

@@ -86,7 +86,7 @@ export const Chart2 = () => {
 
   return (
     <div className="bordered wrapper chart2Wrapper">
-      <h2>全天订单数量</h2>
+      <h2>24h订单数量</h2>
       <div ref={divRef} className="chart"></div>
       <div className="legend">
         <span className="daytime" />

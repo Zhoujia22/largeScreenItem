@@ -32,7 +32,7 @@ export const Home = () => {
         <section className=" section4">
           <Chart6 />
           <div className="bordered ageGroup wrapper">
-            <h2>犯罪人员年龄段分布</h2>
+            <h2>注册用户年龄段分布</h2>
             <div className="charts">
               <Chart7 />
               <Chart8 />
