@@ -73,7 +73,7 @@ export const Chart12 = () => {
     setInterval(() => {
       const newData = data;
       x(newData);
-    }, 3000);
+    }, 4000);
   });
   useEffect(() => {
     myChart.current = echarts.init(divRef.current);
