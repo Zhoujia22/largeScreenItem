@@ -3,10 +3,19 @@ import * as echarts from "echarts";
 import { px } from "../shared/px";
 
 export const Chart2 = () => {
-  const divRef = useRef();
-  useEffect(() => {
-    const myChart = echarts.init(divRef.current);
-    myChart.setOption({
+  const divRef = useRef(null);
+  const myChart = useRef(null);
+  const data = [
+    { name: "上海", day: 4, night: 1 },
+    { name: "广州", day: 4, night: 1 },
+    { name: "杭州", day: 4, night: 1 },
+    { name: "哈尔滨", day: 4, night: 1 },
+    { name: "北京", day: 4, night: 1 },
+    { name: "西安", day: 4, night: 1 },
+    { name: "乌鲁木齐", day: 4, night: 1 },
+  ];
+  const x = (data) => {
+    myChart.current.setOption({
       grid: {
         x: px(60),
         y: px(30),
@@ -31,16 +40,7 @@ export const Chart2 = () => {
       yAxis: {
         axisTick: { show: false },
         type: "category",
-        data: [
-          "上海",
-          "广州",
-          "杭州",
-          "哈尔滨",
-          "北京",
-          "西安",
-          "乌鲁木齐",
-          "成都",
-        ],
+        data: data.map((i) => i.name),
         axisLine: {
           show: true,
           lineStyle: { color: "#083B70" },
@@ -61,7 +61,7 @@ export const Chart2 = () => {
       series: [
         {
           type: "bar",
-          data: [4, 1, 5, 6, 7, 1, 2, 3],
+          data: data.map((i) => i.day),
           itemStyle: {
             color: new echarts.graphic.LinearGradient(0, 0, 1, 0, [
               { offset: 0, color: "#b92ae8" },
@@ -71,7 +71,7 @@ export const Chart2 = () => {
         },
         {
           type: "bar",
-          data: [1, 5, 6, 4, 8, 6, 1, 7],
+          data: data.map((i) => i.night),
           itemStyle: {
             color: new echarts.graphic.LinearGradient(0, 0, 1, 0, [
               { offset: 0, color: "#2034f9" },
@@ -80,8 +80,25 @@ export const Chart2 = () => {
           },
         },
       ],
-    }),
-      [];
+    });
+  };
+  useEffect(() => {
+    setInterval(() => {
+      const newData = [
+        { name: "上海", day: Math.random(), night: Math.random() },
+        { name: "广州", day: Math.random(), night: Math.random() },
+        { name: "杭州", day: Math.random(), night: Math.random() },
+        { name: "哈尔滨", day: Math.random(), night: Math.random() },
+        { name: "北京", day: Math.random(), night: Math.random() },
+        { name: "西安", day: Math.random(), night: Math.random() },
+        { name: "乌鲁木齐", day: Math.random(), night: Math.random() },
+      ];
+      x(newData);
+    }, 2000);
+  });
+  useEffect(() => {
+    myChart.current = echarts.init(divRef.current);
+    x(data), [];
   });
 
   return (

@@ -4,6 +4,8 @@ import { px } from "../shared/px";
 
 export const Chart12 = () => {
   const divRef = useRef();
+  const myChart = useRef(null);
+
   const data = [
     { value: 0.08, name: "5元以下" },
     { value: 0.06, name: "5-10元" },
@@ -15,9 +17,8 @@ export const Chart12 = () => {
     { value: 0.08, name: "101-999元" },
     { value: 0.04, name: "1000元以上" },
   ];
-  useEffect(() => {
-    const myChart = echarts.init(divRef.current);
-    myChart.setOption({
+  const x = (data) => {
+    myChart.current.setOption({
       grid: { x: 0, x2: 0, y: 0, y2: 0, containLabel: true },
       legend: {
         orient: "vertical",
@@ -52,8 +53,31 @@ export const Chart12 = () => {
           },
         },
       ],
-    }),
-      [];
+    });
+  };
+  useEffect(() => {
+    setInterval(() => {
+      const newData = [
+        { value: 0.09, name: "5元以下" },
+        { value: 0.06, name: "5-10元" },
+        { value: 0.08, name: "11-20元" },
+        { value: 0.12, name: "21-30元" },
+        { value: 0.18, name: "31-40元" },
+        { value: 0.04, name: "41-50元" },
+        { value: 0.06, name: "51-100元" },
+        { value: 0.1, name: "101-999元" },
+        { value: 0.2, name: "1000元以上" },
+      ];
+      x(newData);
+    }, 2000);
+    setInterval(() => {
+      const newData = data;
+      x(newData);
+    }, 3000);
+  });
+  useEffect(() => {
+    myChart.current = echarts.init(divRef.current);
+    x(data), [];
   });
 
   return <div ref={divRef} className="chart" />;
